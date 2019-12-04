@@ -1,22 +1,46 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.App h1{
+  font-size: 50px;
+  font-family: cursive;
+}
+
+.product {
+  background: white;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  border-radius: 3px;
+  width: 1300px;
+  height: 200px;
+  margin: 25px;
+}
+
+.product img{
+  width: 200px;
+}
+
+.product-title{
+  flex: 0 0 25%;
+  font-family: cursive;
+  font-size: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.product-description{
+  flex: 0 0 50%;
+  font-family: Georgia,'times new roman',times,serif;
+  font-size: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+.product-price {
+  flex: 20 0 5%;
+  font-size: 30px;
+  color: hotpink;
+  text-align: center;
 }
