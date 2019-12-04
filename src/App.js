@@ -1,28 +1,27 @@
 import React from 'react';
 import './App.css';
 
-let shoppingCartItems = [
+let floorLounges = [
   {
-    item: '8F',
-    description: 'This is the 8F lounge.',
-    density: 500,
+    name: '8F',
+    description: 'This is the 8F lounge. Food and noise are allowed.',
+    density: '7/10',
   },
   {
-    item: '3F',
-    description: 'This is the 3F lounge',
-    density: 150,
+    name: '4F',
+    description: 'This is the 4F library. Food and noise are not allowed.',
+    density: '39/60',
   },
   {
-    item: '2F',
-    description: 'This is the 2F lounge',
-   density: 100, 
+    name: '3F',
+    description: 'This is the 3F lounge. Food and noise are allowed.',
+   density: '10/15', 
   },
   {
-    item: '3F',
-    description: 'This is the 3F lounge',
-    density: 150,
+    name: '2F',
+    description: 'This is the 2F lounge. Food and noise are allowed.',
+    density: '30/70',
   },
-
 ]
 
 function App() {
@@ -30,34 +29,32 @@ function App() {
     <div className="App">
       <h1>NYU Shanghai Floor Map</h1>
       <h2>Check for available lounges!</h2>
-     <ShoppingCart />
+     <FloorMap />
     </div>
   );
 }
 
-function makeProduct(singleProduct){
+function makeFloor(singleFloor){
 return(
-  <Product item={singleProduct.item} image={singleProduct.image} description={singleProduct.description} density={singleProduct.density}/>
+  <Lounge name={singleFloor.name} description={singleFloor.description} density={singleFloor.density}/>
 )
 }
 
-function ShoppingCart() {
-  const products = shoppingCartItems.map(makeProduct);
+function FloorMap() {
+  const floors = floorLounges.map(makeFloor);
   return(
-    <div className="cart">
-    {products}
+    <div className="floors">
+    {floors}
     </div>
   );
 }
 
-function Product(props) {
+function Lounge(props) {
   return(
-    <div className="product">
-      <p className="product-title">{props.item}</p>
-      <p className="product-description">{props.description}</p>
-      <p className="product-price">{props.density}</p>
-      
-
+    <div className="lounge">
+      <p className="lounge-title">{props.name}</p>
+      <p className="lounge-description">{props.description}</p>
+      <p className="lounge-density">{props.density}</p>
     </div>
   )
 }

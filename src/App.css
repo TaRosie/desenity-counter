@@ -9,7 +9,7 @@
   font-family: cursive;
 }
 
-.product {
+.lounge {
   background: white;
   justify-content: center;
   display: flex;
@@ -21,24 +21,21 @@
   margin: 25px;
 }
 
-.product img{
-  width: 200px;
-}
 
-.product-title{
+.lounge-title{
   flex: 0 0 25%;
   font-family: cursive;
   font-size: 30px;
   text-align: center;
 }
 
-.product-description{
+.lounge-description{
   flex: 0 0 50%;
   font-family: Georgia,'times new roman',times,serif;
   font-size: 25px;
 }
 
-.product-price {
+.lounge-density {
   flex: 20 0 5%;
   font-size: 30px;
   color: hotpink;
