@@ -4,23 +4,52 @@ import './App.css';
 let floorLounges = [
   {
     name: '8F',
-    description: 'This is the 8F lounge. Food and noise are allowed.',
-    density: '7/10',
+    lounges:[
+      {name: 'sofa',
+       density: 0,
+      },
+      {name: 'block',
+        density: 2,
+      },
+    ],
+
   },
   {
     name: '4F',
-    description: 'This is the 4F library. Food and noise are not allowed.',
-    density: '39/60',
+    lounges:[
+      {name: 'sofa',
+       density: 0,
+      },
+      {name: 'block',
+        density: 2,
+      },
+    ],
+
+
   },
   {
     name: '3F',
-    description: 'This is the 3F lounge. Food and noise are allowed.',
-   density: '10/15', 
+    lounges:[
+      {name: 'sofa',
+       density: 0,
+      },
+      {name: 'block',
+        density: 2,
+      },
+    ],
+
   },
   {
     name: '2F',
-    description: 'This is the 2F lounge. Food and noise are allowed.',
-    density: '30/70',
+    lounges:[
+      {name: 'sofa',
+       density: 0,
+      },
+      {name: 'block',
+        density: 2,
+      },
+    ],
+
   },
 ]
 
@@ -34,14 +63,9 @@ function App() {
   );
 }
 
-function makeFloor(singleFloor){
-return(
-  <Lounge name={singleFloor.name} description={singleFloor.description} density={singleFloor.density}/>
-)
-}
 
 function FloorMap() {
-  const floors = floorLounges.map(makeFloor);
+  const floors = floorLounges.map(Floor);
   return(
     <div className="floors">
     {floors}
@@ -49,16 +73,26 @@ function FloorMap() {
   );
 }
 
-function Lounge(props) {
+function Floor(props) {
   return(
-    <div className="lounge">
-      <p className="lounge-title">{props.name}</p>
-      <p className="lounge-description">{props.description}</p>
-      <p className="lounge-density">{props.density}</p>
+    <div className="floor">
+      
+      <p className="floor-title">{props.name}</p>
+      <div className="lounges">
+<p className="floor-lounges">{props.lounges.map(Lounge)}</p>
+      </div>
     </div>
   )
 }
 
+function Lounge(props){
+  return(
+    <div className="lounge">
+    <p className="lounge-title">{props.name}</p>
+    <p className="lounge-density">{props.density}</p>
+    </div>
+  )
+}
 
 
 export default App;
