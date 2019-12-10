@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width:100%
 }
  
 img{
@@ -18,17 +19,20 @@ margin: 25px;
   margin: 2px;
 }
 
+.floors{
+  width: 60%;
+}
+
 
 .floor {
   background: rgba(255, 255, 255, 0.637);
   justify-content: center;
   display: flex;
-  flex-direction: row;
   border: 2px solid black;
   border-radius: 3px;
-  width: 1000px;
-  height: 150px;
-  margin: 25px;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
 }
 
 .floor-title{
@@ -60,12 +64,12 @@ margin: 25px;
   border: 1px solid grey;
   border-radius: 3px;
 
-
 }
 .lounge-title{
   display: flex;
   flex: 0 0 10%;
   font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
   margin:0;
   font-family: 'Times New Roman', Times, serif;
 }
