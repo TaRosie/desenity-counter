@@ -1,52 +1,81 @@
 .App {
+  background-image: url("https://i.pinimg.com/originals/03/87/ef/0387ef0acdf21d21eaa8f2302608c183.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+ 
+img{
+width:100px;
+margin: 25px;
+}
+
 .App h1{
   font-size: 50px;
   font-family: cursive;
+  text-align: center;
+  margin: 2px;
 }
 
+
 .floor {
-  background: white;
+  background: rgba(255, 255, 255, 0.637);
   justify-content: center;
   display: flex;
   flex-direction: row;
   border: 2px solid black;
   border-radius: 3px;
-  width: 1300px;
-  height: 200px;
+  width: 1000px;
+  height: 150px;
   margin: 25px;
 }
 
 .floor-title{
-  flex: 0 0 25%;
+  display: flex;
+
   font-family: cursive;
   font-size: 30px;
   text-align: center;
 }
 
-.lounges{
-  flex: 0 0 75%;
+.lounges, .floor-lounges{
+
   display: flex;
-  flex-direction: row;
+  flex: 0 0 70%;
   font-family: Georgia,'times new roman',times,serif;
   font-size: 25px;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content:  space-evenly;
 }
 
 .lounge{
+  background: whitesmoke;
   display: flex;
   flex: 0 0 40%;
-  flex-direction: row;
-  border: 2px solid black;
+
+  height:100px;
+  flex-direction: column;
+  border: 1px solid grey;
   border-radius: 3px;
+
+
+}
+.lounge-title{
+  display: flex;
+  flex: 0 0 10%;
+  font-size: 25px;
+  margin:0;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .lounge-density {
-  flex: 20 0 5%;
-  font-size: 30px;
+  display: flex;
+  flex: 0 0 10%;
+  font-size: 26px;
   color: hotpink;
-  text-align: center;
+  justify-content: center;
+  margin:0;
+
 }

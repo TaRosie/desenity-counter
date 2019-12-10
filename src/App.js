@@ -5,11 +5,11 @@ let floorLounges = [
   {
     name: '8F',
     lounges:[
-      {name: 'sofa',
-       density: 0,
+      {name: 'Sofa',
+       density: '2/5',
       },
-      {name: 'block',
-        density: 2,
+      {name: 'Block',
+        density: '3/6',
       },
     ],
 
@@ -17,11 +17,8 @@ let floorLounges = [
   {
     name: '4F',
     lounges:[
-      {name: 'sofa',
-       density: 0,
-      },
-      {name: 'block',
-        density: 2,
+      {name: 'Library',
+       density: '29/60',
       },
     ],
 
@@ -30,11 +27,11 @@ let floorLounges = [
   {
     name: '3F',
     lounges:[
-      {name: 'sofa',
-       density: 0,
+      {name: 'Lounge',
+       density: '20/25',
       },
-      {name: 'block',
-        density: 2,
+      {name: 'Block',
+        density: '2/10',
       },
     ],
 
@@ -42,11 +39,11 @@ let floorLounges = [
   {
     name: '2F',
     lounges:[
-      {name: 'sofa',
-       density: 0,
+      {name: 'Language Lounge',
+       density: '15/30',
       },
-      {name: 'block',
-        density: 2,
+      {name: 'Caféteria',
+        density: '30/40',
       },
     ],
 
@@ -56,6 +53,7 @@ let floorLounges = [
 function App() {
   return (
     <div className="App">
+     <img className = "logo" src="https://upload.wikimedia.org/wikipedia/en/1/13/NYU_Shanghai_Logo.jpg"></img>
       <h1>NYU Shanghai Floor Map</h1>
       <h2>Check for available lounges!</h2>
      <FloorMap />
@@ -75,8 +73,7 @@ function FloorMap() {
 
 function Floor(props) {
   return(
-    <div className="floor">
-      
+    <div className="floor">  
       <p className="floor-title">{props.name}</p>
       <div className="lounges">
 <p className="floor-lounges">{props.lounges.map(Lounge)}</p>
@@ -86,6 +83,14 @@ function Floor(props) {
 }
 
 function Lounge(props){
+
+  // if (density <= 0.3){
+  //    set
+ 
+  // }else{
+    
+  // }
+
   return(
     <div className="lounge">
     <p className="lounge-title">{props.name}</p>
